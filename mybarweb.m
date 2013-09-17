@@ -1,7 +1,8 @@
-function [hb,he]=barweb(barvalues, errors, bw_legend, groupnames,width, bw_colormap )
+function [hb,he]=mybarweb(barvalues, errors, bw_legend, groupnames,...
+    width, bw_colormap,basevalue )
 
 %
-% [hb,he]=barweb(barvalues, errors, bw_colormap, bw_legend, width )
+% [hb,he]=mybarweb(barvalues, errors, bw_legend, groupnames, width,bw_colormap,basevalue )
 %
 % barweb is the m-by-n matrix of barvalues to be plotted.  barweb calls the
 % MATLAB bar function and plots m groups of n bars using the width and
@@ -60,7 +61,12 @@ else
 	end
 
 	% Plot bars and errors
-	hb=bar(barvalues, width); 
+    if ~isempty(basevalue)
+      hb=bar(barvalues, width,'BaseValue',basevalue);   
+    else
+      hb=bar(barvalues, width);   
+    end
+	
 	hold on;
 
 	if length(bw_colormap)
