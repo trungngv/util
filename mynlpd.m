@@ -1,4 +1,4 @@
-function val = mynlpd(ytrue, ymean, yvar)
+function val = mynlpd(ytrue, ymu, yvar)
 %MYNLPD val = mynlpd(ytrue, ymu, yvar)
 %   Computes the negative log predictive (for a Gaussian predictive
 %   distribution) of the test points.
@@ -10,10 +10,10 @@ function val = mynlpd(ytrue, ymean, yvar)
 %
 % OUTPUT
 %   - the negative log predictive density NLPD = 1/T \sum_{t=1}^T -log
-%   p(y_t; ymu_t, yvar_t)
+%   p(ytrue_t; ymu_t, yvar_t)
 %
 % Trung V. Nguyen
 % 18/01/13
-val = 0.5*mean(((ytrue-ymean).^2)./yvar+log(2*pi*yvar));
+val = 0.5*mean((ytrue-ymu).^2./yvar+log(2*pi*yvar));
 end
 

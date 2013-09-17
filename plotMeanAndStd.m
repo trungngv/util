@@ -3,6 +3,8 @@ function plotMeanAndStd(x, fmean, fstd, color)
 %   Plots a curve for the function f(x) given by fmean together with the
 %   standard deviation around the mean given by fstd.
 %
+%   This will plot on the currently selected figure.
+%
 % INPUT
 %   - x : input values (typically some range)
 %   - fmean : the value of functions at x

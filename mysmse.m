@@ -1,5 +1,5 @@
-function smse = mysmse(ytrue, ypred, trainmean)
-%MYSMSE smse = mysmse(ytrue, ypred)
+function smse = mysmse(ytrue,ypred,trainmean)
+%MYSMSE smse = mysmse(ytrue, ypred,trainmean)
 %   Compute the standardised mean square error (SMSE), also NMSE in some
 %   publications.
 % 
