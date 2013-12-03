@@ -82,7 +82,7 @@ else
 		he=[he;th];
   end
 	xlim([0.5 numgroups-change_axis+0.5]);
-  set(gca, 'xticklabel', groupnames, 'ticklength', [0 0], 'xtick',1:numgroups, 'linewidth', 1,'xgrid','off','ygrid','off');
+  set(gca, 'xticklabel', groupnames, 'ticklength', [0 0], 'xtick',1:numgroups, 'linewidth', 1,'xgrid','off','ygrid','on');
 
 	if ~isempty(bw_legend)
 		legend(hb, bw_legend, 'location', 'best', 'fontsize',12);
