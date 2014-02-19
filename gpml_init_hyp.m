@@ -18,5 +18,6 @@ end
 lengthscales = log((max(x) - min(x) + epsilon)'/2);
 lengthscales(lengthscales < -1e2) = -1e2;
 hyp.cov = [lengthscales; 0.5*log(var(y,1) + epsilon)];
+hyp.cov = log(ones(size(hyp.cov)));
 hyp.lik = 0.5*log(var(y,1)/4 + epsilon);
 

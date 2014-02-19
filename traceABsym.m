@@ -5,6 +5,8 @@ function x = traceABsym(A,B)
 % least one of them is symmetric.
 %
 % Trung Nguyen
-x = A(:).'*B(:);
+
+%x = A(:).'*B(:);
+x = sum(sum(A.*B));
 end
 

@@ -52,9 +52,9 @@ for i = 1:maxTries
       UC = chol(A);
       break
     else
-      if nargout < 2
-        warning(['Matrix is not positive definite in jitChol, adding ' num2str(jitter) ' jitter.'])
-      end
+%       if nargout < 2
+%         warning(['Matrix is not positive definite in jitChol, adding ' num2str(jitter) ' jitter.'])
+%       end
       UC = chol(real(A+jitter*eye(size(A, 1))));
       break
     end

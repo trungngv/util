@@ -1,5 +1,5 @@
 function model = standard_gp(initModel,X,Y,Xtest,Ytest,zeromean)
-%STANDARDGP model = standardGP(initModel,X,Y,Xtest,Ytest,zeromean)
+%STANDARDGP model = standard_gp(initModel,X,Y,Xtest,Ytest,zeromean)
 %   Quick wrapper for a standard GP model.
 %   No data pre-processing for input is performed by this method. The
 %   output is transformed to have zero mean.

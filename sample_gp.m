@@ -11,7 +11,11 @@ function f = sample_gp(x, covfunc, hyp, N)
 %
 % OUTPUT
 %   - f : size(x,1) x N, each column is a sample
-K = feval(covfunc, hyp, x);
+if iscell(covfunc)
+  K = feval(covfunc{:}, hyp, x);
+else
+  K = feval(covfunc, hyp, x);
+end  
 L = jit_chol(K)';
 U = randn(size(x,1),N);
 f = L*U;

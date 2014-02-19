@@ -13,6 +13,9 @@ function plotMeanAndStd(x, fmean, fstd, color)
 %
 % Trung V. Nguyen
 % 18/01/13
+[x,ind] = sort(x,'ascend');
+fmean = fmean(ind);
+fstd = fstd(ind);
 x = x(:); fmean = fmean(:); fstd = fstd(:);
 fbelow = fmean - fstd;
 fabove = flipdim(fmean, 1) + flipdim(fstd, 1);

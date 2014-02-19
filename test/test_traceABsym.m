@@ -1,7 +1,7 @@
 function test_traceABsym(N)
 %TEST_TRACEABSYM test_traceABsym(N)
 if nargin == 0
-  N = 200;
+  N = 1000;
 end
 A = rand(N); A = A + A.'; % make A symmetric
 B = rand(N);
