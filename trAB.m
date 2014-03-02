@@ -1,5 +1,5 @@
-function x = traceAB(A,B)
-%TRACEAB x = traceAB(A,B)
+function x = trAB(A,B)
+%TRACEAB x = trAB(A,B)
 %   
 % Efficient computation for the trace of product of two matrices.
 %
