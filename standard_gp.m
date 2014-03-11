@@ -15,8 +15,8 @@ function model = standard_gp(initModel,X,Y,Xtest,Ytest,zeromean)
 % OUTPUT: the trained model as a structure with following members
 %   - inithyp: initial hyp
 %   - hyp: learned hyp
-%   - ymean : predictive mean (if Xtest specified)
-%   - yvar : predictive variance (if Xtest specified)
+%   - fmean : predictive mean (if Xtest specified)
+%   - fvar : predictive variance (if Xtest specified)
 %   - nlm : negative log marginal
 %   - lp : log predictive probabilities
 %
@@ -38,7 +38,7 @@ else
   model.inithyp = gpml_init_hyp(X,Y,zeromean);
 end
 
-[model.hyp, model.nlm] = minimize(model.inithyp,@gp,-200,...
+[model.hyp, model.nlm] = minimize(model.inithyp,@gp,-1000,...
     model.infFunc, [], model.covfunc, model.likfunc, X, Y0);
 model.nlm = model.nlm(end);
 

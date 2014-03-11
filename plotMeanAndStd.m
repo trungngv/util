@@ -19,8 +19,9 @@ fstd = fstd(ind);
 x = x(:); fmean = fmean(:); fstd = fstd(:);
 fbelow = fmean - fstd;
 fabove = flipdim(fmean, 1) + flipdim(fstd, 1);
-fill([x; flipdim(x, 1)], [fbelow; fabove], color);
+h = fill([x; flipdim(x, 1)], [fbelow; fabove], color);
+set(h,'EdgeColor','None');
 hold on;
-plot(x, fmean);
+plot(x, fmean, 'k','LineWidth',2);
 end
 
