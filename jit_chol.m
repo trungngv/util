@@ -48,7 +48,7 @@ for i = 1:maxTries
   try
     % Try --- need to check A is positive definite
     if jitter == 0;
-      jitter = abs(mean(diag(A)))*1e-6;
+      jitter = abs(mean(diag(A)))*1e-4;
       UC = chol(A);
       break
     else
