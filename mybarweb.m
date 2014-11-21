@@ -78,7 +78,7 @@ else
 	he=[];
 	for i = 1:numbars
 		x = (1:numgroups) - groupwidth/2 + (2*i-1) * groupwidth / (2*numbars);
-		th=errorbar(x, barvalues(:,i), errors(:,i), 'k', 'linestyle', 'none');
+		th=errorbar(x, barvalues(:,i), errors(:,i), 'k', 'linestyle', 'none','linewidth',1.5);
 		he=[he;th];
   end
 	xlim([0.5 numgroups-change_axis+0.5]);
